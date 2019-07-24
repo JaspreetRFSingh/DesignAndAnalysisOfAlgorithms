@@ -74,8 +74,6 @@ public class PrimAlgo {
                                     {6, 8, 0, 0, 9},
                                     {0, 5, 7, 9, 0},
                                    };
- 
-     
         t.primMST(graph);
     }
 	
