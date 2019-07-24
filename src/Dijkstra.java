@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Dijkstra
 {
-    static Scanner scan; // scan is a Scanner Object
+    static Scanner scan;
  
     public static void main(String[] args)
     {
@@ -11,24 +11,24 @@ public class Dijkstra
     	System.out.print("Enter number of nodes: ");
     	nodes = scan.nextInt();
         int[] preD = new int[nodes];
-        int min = 999, nextNode = 0; // min holds the minimum value, nextNode holds the value for the next node.
-        int[] distance = new int[nodes]; // the distance matrix
-        int[][] matrix = new int[nodes][nodes]; // the actual matrix
-        int[] visited = new int[nodes]; // the visited array
+        int min = 999, nextNode = 0;
+        int[] distance = new int[nodes];
+        int[][] matrix = new int[nodes][nodes];
+        int[] visited = new int[nodes];
  
         System.out.println("Enter the cost matrix");
  
         for (int i = 0; i < distance.length; i++)
         {
-            visited[i] = 0; //initialize visited array to zeros
+            visited[i] = 0; 
             preD[i] = 0;
  
             System.out.println("Enter row "+(i+1)+": ");
             for (int j = 0; j < distance.length; j++)
             {
-                matrix[i][j] = scan.nextInt(); //fill the matrix
+                matrix[i][j] = scan.nextInt();
                 if (matrix[i][j]==0)
-                    matrix[i][j] = 999; // make the zeros as 999
+                    matrix[i][j] = 999;
             }
         }
  
@@ -43,9 +43,9 @@ public class Dijkstra
         	System.out.println();
         }
         
-        distance = matrix[0]; //initialize the distance array
-        visited[0] = 1; //set the source node as visited
-        distance[0] = 0; //set the distance from source to source to zero which is the starting point
+        distance = matrix[0];
+        visited[0] = 1; 
+        distance[0] = 0; 
  
         for (int counter = 0; counter < nodes; counter++)
         {
